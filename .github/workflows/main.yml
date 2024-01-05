@@ -22,7 +22,7 @@ jobs:
       - run: |
            echo registry=https://npm.pkg.github.com/ > .npmrc
            echo always-auth=true >> .npmrc
-           echo _authToken=${{ secrets.NPM_TOKEN }} >> .npmrc
+           echo _authToken_npm=${{ secrets.NPM_TOKEN }} >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_TOKEN }}
