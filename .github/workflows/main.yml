@@ -20,7 +20,7 @@ jobs:
       - run: npm install
       - run: npm ci
       - run: |
-           echo registry=https://registry.npmjs.org/ > .npmrc
+           echo registry=https://npm.pkg.github.com/ > .npmrc
            echo always-auth=true >> .npmrc
            echo _authToken=${{ secrets.NPM_TOKEN }} >> .npmrc
       - run: npm publish
