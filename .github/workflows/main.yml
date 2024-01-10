@@ -21,7 +21,7 @@ jobs:
       - run: npm ci
       - run: |
            echo registry=https://npm.pkg.github.com/ > .npmrc
-           echo always-auth=true >> .npmrc
+           echo always-auth=false >> .npmrc
            echo _authToken_npm=${{ secrets.NPM_TOKEN }} >> .npmrc
       - name: Print .npmrc
         run: cat $NPM_CONFIG_USERCONFIG
